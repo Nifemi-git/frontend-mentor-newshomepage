@@ -127,12 +127,12 @@ nav {
 
     a {
       text-decoration: none;
+      letter-spacing: 5px;
       background-color: $lightRed;
       color: $offWhite;
       width: fit-content;
       padding: 0.75rem 1.25rem;
       font-size: 12px;
-      font-weight: bold;
     }
     a:hover {
       background-color: $darkBlue;
@@ -206,6 +206,7 @@ nav {
 
 @media (min-width: 756px) {
   nav {
+    width: 70%;
     padding-block: 1.25rem;
     margin-bottom: 0.75rem;
     display: flex;
@@ -234,6 +235,10 @@ nav {
     .mobile-menu {
       display: none;
     }
+  }
+
+  .wrapper {
+    width: 70%;
   }
 
   .main-grid {
