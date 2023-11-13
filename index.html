@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
+      rel="stylesheet" />
+    <title>News Homepage</title>
+  </head>
+  <body>
+    <div id="shade-div" class="menu-shade"></div>
+    <!--wrapper for the entire page-->
+    <div class="wrapper">
+      <!--navbar with logo and menu-->
+      <nav>
+        <!--logo-->
+        <img src="images/logo.svg" />
+
+        <!--menu div-->
+        <div class="navbar-links">
+          <a href="#">Home</a>
+          <a href="#">New</a>
+          <a href="#">Popular</a>
+          <a href="#">Trending</a>
+          <a href="#">Categories</a>
+        </div>
+
+        <!--hamburger-->
+        <button id="open-menu-btn"><img src="images/icon-menu.svg" /></button>
+        <div id="menu" class="mobile-menu">
+          <button id="close-menu-btn">
+            <img src="images/icon-menu-close.svg" />
+          </button>
+          <div class="mobile-menu-links">
+            <a href="#">Home</a>
+            <a href="#">New</a>
+            <a href="#">Popular</a>
+            <a href="#">Trending</a>
+            <a href="#">Categories</a>
+          </div>
+        </div>
+      </nav>
+      <!--main body grid container-->
+      <div class="main-grid">
+        <!--web 3 images-->
+        <img src="images/image-web-3-mobile.jpg" class="mobile-image" />
+        <img src="images/image-web-3-desktop.jpg" class="desktop-image" />
+
+        <!--text block-->
+        <!--h1-->
+        <h1 class="text-block-h1">The Bright Future of Web 3.0?</h1>
+        <!-- paragraph and button-->
+        <div class="text-block-p">
+          <p>
+            We dive into the next evolution of the web that claims to put the
+            power of the platforms back into the hands of the people. But is it
+            really fulfilling its promise?
+          </p>
+          <a href="">READ MORE</a>
+        </div>
+
+        <!--New block-->
+        <div class="new-text-block">
+          <h1>New</h1>
+          <!--New text block 1-->
+          <div>
+            <a href="#"> Hydrogen VS Electric Cars </a>
+            <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+          </div>
+          <hr />
+          <!--New text block 2-->
+          <div>
+            <a href="#"> The Downsides of AI Artistry </a>
+            <p>
+              What are the possible adverse effects of on-demand AI image
+              generation?
+            </p>
+          </div>
+          <hr />
+          <!--New text block 3-->
+          <div>
+            <a href="#"> Is VC Funding Drying Up? </a>
+            <p>
+              Private funding by VC firms is down 50% YOY. We take a look at
+              what that means.
+            </p>
+          </div>
+        </div>
+
+        <!--bottom row-->
+
+        <!--item 01-->
+        <div class="bottom-row-item item1">
+          <img src="images/image-retro-pcs.jpg" />
+          <div>
+            <h1>01</h1>
+            <h3>Reviving Retro PCs</h3>
+            <p>What happens when old PCs are given modern upgrades?</p>
+          </div>
+        </div>
+
+        <!--item 02-->
+        <div class="bottom-row-item item2">
+          <img src="images/image-top-laptops.jpg" />
+          <div>
+            <h1>02</h1>
+            <h3>Top 10 Laptops of 2022</h3>
+            <p>Our best picks for various needs and budgets.</p>
+          </div>
+        </div>
+
+        <!--item 03-->
+        <div class="bottom-row-item item3">
+          <img src="images/image-gaming-growth.jpg" />
+          <div>
+            <h1>03</h1>
+            <h3>The Growth of Gaming</h3>
+            <p>How the pandemic has sparked fresh opportunities.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

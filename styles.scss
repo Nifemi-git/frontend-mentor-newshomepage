@@ -1,0 +1,285 @@
+$softOrange: hsl(35, 77%, 62%);
+$lightRed: hsl(5, 85%, 63%);
+$darkBlue: hsl(240, 100%, 5%);
+$darkGrayishBlue: hsl(236, 13%, 42%);
+$grayishBlue: hsl(233, 8%, 79%);
+$offWhite: hsl(36, 100%, 99%);
+
+@keyframes menuAnimation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 55%;
+  }
+}
+
+body {
+  font-family: Inter;
+  p {
+    font-size: 12px;
+  }
+}
+
+.menu-shade {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  z-index: 1;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 70%;
+}
+
+nav {
+  padding-block: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .navbar-links {
+    display: none;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+  }
+
+  button:hover {
+    cursor: pointer;
+    box-shadow: black 2px 0px 2px 1px;
+  }
+  button:active {
+    background-color: rgba($color: #000000, $alpha: 0.5);
+  }
+  .mobile-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    background-color: white;
+    width: 55%;
+    height: 100%;
+    padding: 1.75rem;
+    display: none;
+    flex-direction: column;
+    gap: 2.5rem;
+    animation: menuAnimation 0.2s linear 0s 1 normal backwards;
+
+    button {
+      display: block;
+      align-self: flex-end;
+    }
+    button:active {
+      background-color: rgba($color: #000000, $alpha: 0.5);
+    }
+
+    .mobile-menu-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      a:hover {
+        color: $lightRed;
+      }
+    }
+  }
+}
+
+.main-grid {
+  .desktop-image {
+    display: none;
+  }
+
+  .mobile-image {
+    width: 100%;
+  }
+
+  .text-block-h1 {
+    color: $darkBlue;
+    font-size: 2.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .text-block-p {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+    p {
+      color: $darkGrayishBlue;
+      margin-top: 0px;
+    }
+
+    a {
+      text-decoration: none;
+      background-color: $lightRed;
+      color: $offWhite;
+      width: fit-content;
+      padding: 0.75rem 1.25rem;
+      font-size: 12px;
+      font-weight: bold;
+    }
+    a:hover {
+      background-color: $darkBlue;
+    }
+  }
+
+  .new-text-block {
+    background-color: $darkBlue;
+    padding: 1.25rem;
+    margin-block: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+    hr {
+      width: 100%;
+    }
+
+    h1 {
+      color: $softOrange;
+      margin: 0px 0px 1rem 0px;
+    }
+
+    a {
+      text-decoration: none;
+      color: $offWhite;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    a:hover {
+      color: $softOrange;
+    }
+
+    p {
+      color: $grayishBlue;
+    }
+  }
+}
+
+.bottom-row-item {
+  margin-bottom: 1.75rem;
+  display: flex;
+  gap: 1.25rem;
+  height: fit-content;
+
+  img {
+    height: 6.25rem;
+  }
+
+  h1 {
+    margin-block: 0px;
+    color: $grayishBlue;
+  }
+
+  p {
+    color: $darkGrayishBlue;
+  }
+
+  h3 {
+    margin-block: 0px;
+    color: $darkBlue;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  h3:hover {
+    color: $lightRed;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 756px) {
+  nav {
+    padding-block: 1.25rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .navbar-links {
+      display: flex;
+      gap: 2rem;
+
+      a {
+        text-decoration: none;
+        color: $darkGrayishBlue;
+        font-size: 12px;
+      }
+
+      a:hover {
+        color: $lightRed;
+      }
+    }
+
+    button {
+      display: none;
+    }
+
+    .mobile-menu {
+      display: none;
+    }
+  }
+
+  .main-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, max-content);
+    gap: 1.25rem;
+
+    .mobile-image {
+      display: none;
+    }
+
+    .desktop-image {
+      display: block;
+      width: 100%;
+      grid-column: span 2;
+    }
+
+    .new-text-block {
+      order: 2;
+      grid-row: span 2;
+      margin-block: 0px;
+    }
+
+    .text-block-h1 {
+      order: 3;
+      margin-block: 0px;
+    }
+
+    .text-block-p {
+      order: 4;
+    }
+  }
+
+  .bottom-row-item {
+    margin-top: 1.75rem;
+    margin-bottom: 0px;
+  }
+
+  .item1 {
+    order: 5;
+  }
+
+  .item2 {
+    order: 6;
+  }
+
+  .item3 {
+    order: 7;
+  }
+}

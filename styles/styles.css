@@ -1,0 +1,239 @@
+@keyframes menuAnimation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 55%;
+  }
+}
+body {
+  font-family: Inter;
+}
+body p {
+  font-size: 12px;
+}
+
+.menu-shade {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 70%;
+}
+
+nav {
+  padding-block: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .navbar-links {
+  display: none;
+}
+nav button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+nav button:hover {
+  cursor: pointer;
+  box-shadow: black 2px 0px 2px 1px;
+}
+nav button:active {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+nav .mobile-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  background-color: white;
+  width: 55%;
+  height: 100%;
+  padding: 1.75rem;
+  display: none;
+  flex-direction: column;
+  gap: 2.5rem;
+  animation: menuAnimation 0.2s linear 0s 1 normal backwards;
+}
+nav .mobile-menu button {
+  display: block;
+  align-self: flex-end;
+}
+nav .mobile-menu button:active {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+nav .mobile-menu .mobile-menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+nav .mobile-menu .mobile-menu-links a {
+  text-decoration: none;
+  color: black;
+}
+nav .mobile-menu .mobile-menu-links a:hover {
+  color: hsl(5, 85%, 63%);
+}
+
+.main-grid .desktop-image {
+  display: none;
+}
+.main-grid .mobile-image {
+  width: 100%;
+}
+.main-grid .text-block-h1 {
+  color: hsl(240, 100%, 5%);
+  font-size: 2.25rem;
+  margin-bottom: 0.75rem;
+}
+.main-grid .text-block-p {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.main-grid .text-block-p p {
+  color: hsl(236, 13%, 42%);
+  margin-top: 0px;
+}
+.main-grid .text-block-p a {
+  text-decoration: none;
+  background-color: hsl(5, 85%, 63%);
+  color: hsl(36, 100%, 99%);
+  width: fit-content;
+  padding: 0.75rem 1.25rem;
+  font-size: 12px;
+  font-weight: bold;
+}
+.main-grid .text-block-p a:hover {
+  background-color: hsl(240, 100%, 5%);
+}
+.main-grid .new-text-block {
+  background-color: hsl(240, 100%, 5%);
+  padding: 1.25rem;
+  margin-block: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.main-grid .new-text-block hr {
+  width: 100%;
+}
+.main-grid .new-text-block h1 {
+  color: hsl(35, 77%, 62%);
+  margin: 0px 0px 1rem 0px;
+}
+.main-grid .new-text-block a {
+  text-decoration: none;
+  color: hsl(36, 100%, 99%);
+  font-size: 15px;
+  font-weight: bold;
+}
+.main-grid .new-text-block a:hover {
+  color: hsl(35, 77%, 62%);
+}
+.main-grid .new-text-block p {
+  color: hsl(233, 8%, 79%);
+}
+
+.bottom-row-item {
+  margin-bottom: 1.75rem;
+  display: flex;
+  gap: 1.25rem;
+  height: fit-content;
+}
+.bottom-row-item img {
+  height: 6.25rem;
+}
+.bottom-row-item h1 {
+  margin-block: 0px;
+  color: hsl(233, 8%, 79%);
+}
+.bottom-row-item p {
+  color: hsl(236, 13%, 42%);
+}
+.bottom-row-item h3 {
+  margin-block: 0px;
+  color: hsl(240, 100%, 5%);
+  font-size: 15px;
+  font-weight: bold;
+}
+.bottom-row-item h3:hover {
+  color: hsl(5, 85%, 63%);
+  cursor: pointer;
+}
+
+@media (min-width: 756px) {
+  nav {
+    padding-block: 1.25rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav .navbar-links {
+    display: flex;
+    gap: 2rem;
+  }
+  nav .navbar-links a {
+    text-decoration: none;
+    color: hsl(236, 13%, 42%);
+    font-size: 12px;
+  }
+  nav .navbar-links a:hover {
+    color: hsl(5, 85%, 63%);
+  }
+  nav button {
+    display: none;
+  }
+  nav .mobile-menu {
+    display: none;
+  }
+  .main-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, max-content);
+    gap: 1.25rem;
+  }
+  .main-grid .mobile-image {
+    display: none;
+  }
+  .main-grid .desktop-image {
+    display: block;
+    width: 100%;
+    grid-column: span 2;
+  }
+  .main-grid .new-text-block {
+    order: 2;
+    grid-row: span 2;
+    margin-block: 0px;
+  }
+  .main-grid .text-block-h1 {
+    order: 3;
+    margin-block: 0px;
+  }
+  .main-grid .text-block-p {
+    order: 4;
+  }
+  .bottom-row-item {
+    margin-top: 1.75rem;
+    margin-bottom: 0px;
+  }
+  .item1 {
+    order: 5;
+  }
+  .item2 {
+    order: 6;
+  }
+  .item3 {
+    order: 7;
+  }
+}/*# sourceMappingURL=styles.css.map */
