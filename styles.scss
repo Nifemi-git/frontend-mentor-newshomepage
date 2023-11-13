@@ -32,12 +32,9 @@ body {
   z-index: 1;
 }
 
-.wrapper {
+nav {
   margin: 0 auto;
   width: 95%;
-}
-
-nav {
   padding-block: 1.25rem;
   display: flex;
   justify-content: space-between;
@@ -96,6 +93,11 @@ nav {
       }
     }
   }
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 95%;
 }
 
 .main-grid {
@@ -190,13 +192,13 @@ nav {
     color: $darkGrayishBlue;
   }
 
-  h3 {
+  h2 {
     margin-block: 0px;
     color: $darkBlue;
     font-size: 15px;
     font-weight: bold;
   }
-  h3:hover {
+  h2:hover {
     color: $lightRed;
     cursor: pointer;
   }
